@@ -39,11 +39,12 @@
 					ng-if="shopRatingScore"><div itemscope=""
 						itemprop="aggregateRating"
 						itemtype="http://schema.org/AggregateRating">
-						<h2 class="color-stress ng-binding" itemprop="ratingValue">4.5</h2>
+						<s:set var="pingfen" value="(#request.seller.serviceAttitude+#request.seller.dishesEvaluation)/2"></s:set>
+						<h2 class="color-stress ng-binding" itemprop="ratingValue"><s:property value="java.lang.String.format('%.1f',pingfen)"/></h2>
 						<meta itemprop="bestRating" content="5">
 						<meta itemprop="reviewCount" content="884">
 						<p>
-							综合评价<br> <span class="color-mute ng-binding">高于周边商家</span>
+							综合评价<br> <span class="color-mute ng-binding">高于周边商家</span>7
 							<!-- ngIf: shopRatingScore.compare_rating -->
 							<span class="color-stress ng-binding ng-scope"
 								ng-if="shopRatingScore.compare_rating">63.1%</span>
@@ -52,20 +53,20 @@
 					</div>
 					<div>
 						<p>服务态度
-						<div class="starrating icon-star ng-isolate-scope" title="评分4.5分"
+						<div class="starrating icon-star ng-isolate-scope" title='<s:property value="#request.seller.serviceAttitude"/>'
 							rate-star="" rating="shopRatingScore.service_score">
 							<span class="icon-star" ng-style="{ width: (rating * 20) + '%' }"
 								style="width: 89.9842%;"></span>
 						</div>
-						<span class="color-stress ng-binding">4.5分</span>
+						<span class="color-stress ng-binding"><s:property value="#request.seller.serviceAttitude"/></span>
 						</p>
 						<p>菜品评价
-						<div class="starrating icon-star ng-isolate-scope" title="评分4.5分"
+						<div class="starrating icon-star ng-isolate-scope" title='<s:property value="#request.seller.serviceAttitude"/>'
 							rate-star="" rating="shopRatingScore.food_score">
 							<span class="icon-star" ng-style="{ width: (rating * 20) + '%' }"
 								style="width: 89.2616%;"></span>
 						</div>
-						<span class="color-stress ng-binding">4.5分</span>
+						<span class="color-stress ng-binding"><s:property value="#request.seller.dishesEvaluation"/></span>
 						</p>
 					</div></li>
 				<!-- end ngIf: shopRatingScore -->
