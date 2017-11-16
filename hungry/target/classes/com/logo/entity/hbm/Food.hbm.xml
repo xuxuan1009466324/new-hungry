@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+
+	<class name="com.logo.entity.Food" table="tb_food">
+		<!-- 配置主键 -->
+		<id name="foodId" column="foodId">
+			<generator class="native"></generator>
+		</id>
+		<!-- 配置其他属性 -->
+		<property name="foodName" column="foodName"></property>
+		<property name="remarks" column="remarks"></property>
+		<property name="price" column="price"></property>
+		<!-- <property name="categoryId" column="categoryId"></property> -->
+		<property name="status" column="status"></property>
+		<property name="monthlySales" column="monthlySales"></property>
+		
+		<many-to-one name="category" class="com.logo.entity.Category" column="categoryId"></many-to-one>
+	</class>
+	
+</hibernate-mapping>

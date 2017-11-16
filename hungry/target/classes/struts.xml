@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "struts-2.3.dtd" >
+<struts>
+
+   <!-- 把Action的创建权交给spring -->
+   <constant name="struts.objectFactory" value="spring"></constant>
+     
+   <package name="orderStatus" extends="struts-default">
+   	<action name="index" class="com.logo.action.OrderStatusAction" method="toIndex">
+   		<result>/WEB-INF/jsp/login.jsp</result>
+   	</action>
+   </package>
+   
+</struts>

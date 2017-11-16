@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+
+	<class name="com.logo.entity.Category" table="tb_category">
+		<!-- 配置主键 -->
+		<id name="categoryId" column="categoryId">
+			<generator class="native"></generator>
+		</id>
+		<!-- 配置其他属性 -->
+		<property name="categoryName" column="categoryName"></property>
+		<property name="level" column="level"></property>
+		<!-- <property name="parentId" column="parentId"></property>
+		<property name="sId" column="sId"></property> -->
+		<property name="remarks" column="remarks"></property>
+		<property name="status" column="status"></property>
+		
+		<many-to-one name="seller" class="com.logo.entity.Seller" column="sId"></many-to-one>
+		<many-to-one name="parentCategory" class="com.logo.entity.Category" column="parentId"></many-to-one>
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.logo.entity">
+	<class name="Collection" table="tb_collection">
+	<id name="collectionId" column="collectionId">
+		<generator class="native"></generator>
+	</id>
+	<!-- <property name="sId" column="sId"></property> -->
+	<!-- <property name="uId" column="uId"></property> -->
+	<many-to-one name="seller" class="com.logo.entity.Seller" column="sId" ></many-to-one>
+	<many-to-one name="user" class="com.logo.entity.User" column="uId" ></many-to-one>
+	
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+
+	<class name="com.logo.entity.Seller" table="tb_seller">
+		<!-- 配置主键 -->
+		<id name="sId" column="sId">
+			<generator class="native"></generator>
+		</id>
+		<!-- 配置其他属性 -->
+		<property name="sellerName" column="sellerName"></property>
+		<property name="serviceAttitude" column="serviceAttitude"></property>
+		<property name="dishesEvaluation" column="dishesEvaluation"></property>
+		<property name="detailedAddress" column="detailedAddress"></property>
+		<property name="startBusinessHours" column="startBusinessHours"></property>
+		<property name="endBusinessHours" column="endBusinessHours"></property>
+		<property name="distributionAgent" column="distributionAgent"></property>
+		<property name="introduce" column="introduce"></property>
+		<property name="notice" column="notice"></property>
+		<property name="sendPrice" column="sendPrice"></property>
+		<property name="distributionFee" column="distributionFee"></property>
+		<property name="averageSpeedOfService" column="averageSpeedOfService"></property>
+		<property name="monthlySales" column="monthlySales"></property>
+		<property name="registrationTime" column="registrationTime"></property>
+		<property name="fixedTelephone" column="fixedTelephone"></property>
+		<property name="acceptReservations" column="acceptReservations"></property>
+		<property name="evaluationQuantity" column="evaluationQuantity"></property>
+		<property name="phone" column="phone"></property>
+		<property name="status" column="status"></property>
+	</class>
+
+</hibernate-mapping>

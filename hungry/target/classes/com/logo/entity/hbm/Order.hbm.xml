@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.logo.entity">
+	<class name="Order" table="tb_order">
+		<id name="orderId" column="orderId">
+			<generator class="native"></generator>
+		</id>
+		<!-- <property name="uId" column="uId"></property> -->
+		<many-to-one name="user" class="com.logo.entity.User" column="uId" unique="true"></many-to-one>
+		<property name="orderNo" column="orderNo"></property>
+		<property name="fixedTelephone" column="fixedTelephone"></property>
+		<property name="phone" column="phone"></property>
+		<!-- <property name="sId" column="sId"></property> -->
+		<many-to-one name="seller" class="com.logo.entity.Seller" column="sId" unique="true"></many-to-one>
+		<property name="remarks" column="remarks"></property>
+		<property name="total" column="total"></property>
+		<property name="actualPayment" column="actualPayment"></property>
+		<!-- <property name="orderStatusId" column="orderStatusId"></property> -->
+		<many-to-one name="orderStatus" class="com.logo.entity.OrderStatus" column="orderStatusId" unique="true"></many-to-one>
+		<property name="orderTime" column="orderTime"></property>
+		<property name="finishTime" column="finishTime"></property>
+		<property name="payhTime" column="payhTime"></property>
+		<property name="distributionAgent" column="distributionAgent"></property>
+		<property name="detailedAddress" column="detailedAddress"></property>
+		<!-- <property name="paymentMethodId" column="paymentMethodId"></property> -->
+		<many-to-one name="paymentMethod"  class="com.logo.entity.PaymentMethod" column="paymentMethodId" unique="true"></many-to-one>
+		<property name="serviceTime" column="serviceTime"></property>
+		<!-- <property name="cancellationOrderId" column="cancellationOrderId"></property> -->
+		<many-to-one name="cancellationorder" class="com.logo.entity.CancellationOrder" column="cancellationOrderId" unique="true"></many-to-one>
+		<property name="cancellationOrderReason" column="cancellationOrderReason"></property>
+		<property name="sellerService" column="sellerService"></property>
+		<property name="roomSpeed" column="roomSpeed"></property>
+		<property name="havePicture" column="havePicture"></property>
+	</class>
+</hibernate-mapping>
