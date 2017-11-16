@@ -40,11 +40,11 @@
 						itemprop="aggregateRating"
 						itemtype="http://schema.org/AggregateRating">
 						<s:set var="pingfen" value="(#request.seller.serviceAttitude+#request.seller.dishesEvaluation)/2"></s:set>
-						<h2 class="color-stress ng-binding" itemprop="ratingValue"><s:property value="java#lang#String#format('%.1f',pingfen)"/></h2>
+						<h2 class="color-stress ng-binding" itemprop="ratingValue"><s:property value="java.lang.String.format('%.1f',pingfen)"/></h2>
 						<meta itemprop="bestRating" content="5">
 						<meta itemprop="reviewCount" content="884">
 						<p>
-							综合评价<br> <span class="color-mute ng-binding">高于周边商家</span>
+							综合评价<br> <span class="color-mute ng-binding">高于周边商家</span>7
 							<!-- ngIf: shopRatingScore.compare_rating -->
 							<span class="color-stress ng-binding ng-scope"
 								ng-if="shopRatingScore.compare_rating">63.1%</span>
