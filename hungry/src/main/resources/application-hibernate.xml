@@ -23,6 +23,11 @@
      <property name="jdbcUrl" value="${jdbc.url}"></property>
      <property name="user" value="${jdbc.username}"></property>
      <property name="password" value="${jdbc.password}"></property>
+     <property name="maxIdleTime" value="maxIdleTime"></property>
+     <property name="minPoolSize" value="${jdbc.minPoolSize}"></property>
+     <property name="maxPoolSize" value="${jdbc.maxPoolSize}"></property>
+     <property name="initialPoolSize" value="${jdbc.initialPoolSize}"></property>
+     <property name="maxStatements" value="${jdbc.maxStatements}"></property>
   </bean>
   
   <!-- 配置SessionFactory
