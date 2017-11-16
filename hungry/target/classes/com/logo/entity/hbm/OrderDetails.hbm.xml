@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "hibernate-mapping-3.0.dtd" >
-<hibernate-mapping package="con.logo.entity">
-	<class name="Orderdetails" table="tb_orderdetails">
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.logo.entity">
+	<class name="OrderDetails" table="tb_orderdetails">
 		<id name="orderDetailsId" column="orderDetailsId">
 			<generator class="native"></generator>
 		</id>
 		<!-- <property name="foodId" column="foodId"></property> -->
-		<many-to-one name="food" class="com.logo.entity.Food" column="foodId" unique="true"></many-to-one>
+		<many-to-one name="food" class="Food" column="foodId" unique="true"></many-to-one>
 		<property name="number" column="number"></property>
 		<property name="price" column="price"></property>
 		<!-- <property name="orderId" column="orderId"></property> -->
-		<many-to-one name="order" class="com.logo.entity.Order" column="orderId" unique="true"></many-to-one>
+		<many-to-one name="order" class="Order" column="orderId" unique="true"></many-to-one>
 		<property name="totalPrice" column="totalPrice"></property>
 		<!-- <property name="satisfactionDegreeId" column="satisfactionDegreeId"></property> -->
-		<many-to-one name="satisfactionDegree" class="com.logo.entity.SatisfactionDegree" column="satisfactionDegreeId" unique="true"></many-to-one>
+		<many-to-one name="satisfactionDegree" class="SatisfactionDegree" column="satisfactionDegreeId" unique="true"></many-to-one>
 		<property name="evaluationReasons" column="evaluationReasons"></property>
 	</class>
 </hibernate-mapping>

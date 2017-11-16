@@ -4,6 +4,12 @@ public class Collection {
 
 	private Long collectionId;
 	private Seller seller;
+	public Seller getSeller() {
+		return seller;
+	}
+	public void setSeller(Seller seller) {
+		this.seller = seller;
+	}
 	private User user;
 	
 	public User getUser() {

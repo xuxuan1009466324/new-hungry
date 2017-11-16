@@ -94,7 +94,7 @@
 	<div ng-view="" role="main" class="ng-scope">
 		<div class="shopguide ng-isolate-scope" shop-guide="" data="shop"
 			isdisabled="shop.disabled">
-			<%@include file="../common/top_header.jsp" %>
+			<%@include file="../common/top_header.jsp" %> <!-- 引用店家详情页面  -->
 		</div>
 		<div shop-nav="" data="shop" filter-data="shop.filter"
 			display-type="shop.displayType" shop-action="shopAction"

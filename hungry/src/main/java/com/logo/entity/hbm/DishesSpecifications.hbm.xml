@@ -8,6 +8,6 @@
 <!-- <property name="foodId" column="foodId"></property> -->
 <property name="specificationsName" column="specificationsName"></property>
 <property name="price" column="price"></property>
- <many-to-one name="food" class="com.logo.entity.Food" column="foodId"></many-to-one>
+ <many-to-one name="food" class="Food" column="foodId"></many-to-one>
 </class>
 </hibernate-mapping>

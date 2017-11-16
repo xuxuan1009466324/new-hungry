@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "hibernate-mapping-3.0.dtd" >
-<hibernate-mapping>
-	<class name="com.logo.entity.UserAddress" table="tb_useraddress">
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping  package="com.logo.entity">
+	<class name="UserAddress" table="tb_useraddress">
 		<id name="uAddressId" column="uAddressId">
 			<generator class="native"></generator>
 		</id>
@@ -13,7 +13,7 @@
 		<property name="position" column="position"></property>
 		<property name="detailedAddress" column="detailedAddress"></property>
 		<!-- <property name="uId" column="uId"></property> -->
-		<many-to-one name="user" class="com.logo.entity.User" column="uId" unique="true"></many-to-one>
+		<many-to-one name="user" class="User" column="uId" unique="true"></many-to-one>
 		<property name="status" column="status"></property>
 		<!-- <set name="users" >
 			<key column="uId"></key>

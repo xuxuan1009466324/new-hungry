@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "hibernate-mapping-3.0.dtd" >
-<hibernate-mapping>
-	<class name="com.logo.entity.ShoppingCart" table="tb_shoppingcart">
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping  package="com.logo.entity">
+	<class name="ShoppingCart" table="tb_shoppingcart">
 		<id name="shoppingCartId"  column="shoppingCartId">
 			<generator class="native"></generator>
 		</id>
@@ -9,8 +9,8 @@
 		<!-- <property name="sId"  column="sId"></property>
 		<property name="uId"  column="uId"></property> -->
 		
-		<many-to-one name="seller" class="com.logo.entity.Seller" column="sId" unique="true"></many-to-one>
-		<many-to-one name="user" class="com.logo.entity.User" column="uId" unique="true"></many-to-one>
+		<many-to-one name="seller" class="Seller" column="sId" unique="true"></many-to-one>
+		<many-to-one name="user" class="User" column="uId" unique="true"></many-to-one>
 		<property name="addTime"  column="addTime"></property>
 		<property name="modificationTime"  column="modificationTime"></property>
 	</class>

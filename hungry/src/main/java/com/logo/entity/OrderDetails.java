@@ -1,7 +1,7 @@
 package com.logo.entity;
 
 
-public class Orderdetails {
+public class OrderDetails {
 	
 	private Long orderDetailsId;
 	//private Long foodId;

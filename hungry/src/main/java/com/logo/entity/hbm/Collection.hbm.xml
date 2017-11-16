@@ -7,8 +7,8 @@
 	</id>
 	<!-- <property name="sId" column="sId"></property> -->
 	<!-- <property name="uId" column="uId"></property> -->
-	<many-to-one name="seller" class="com.logo.entity.Seller" column="sId" ></many-to-one>
-	<many-to-one name="user" class="com.logo.entity.User" column="uId" ></many-to-one>
+	<many-to-one name="seller" class="Seller" column="sId" ></many-to-one>
+	<many-to-one name="user" class="User" column="uId" ></many-to-one>
 	
 	</class>
 </hibernate-mapping>

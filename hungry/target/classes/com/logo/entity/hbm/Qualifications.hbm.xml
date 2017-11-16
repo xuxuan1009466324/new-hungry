@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "hibernate-mapping-3.0.dtd" >
-<hibernate-mapping>
-	<class name="com.logo.entity.Qualifications" table="tb_qualifications">
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping  package="com.logo.entity">
+	<class name="Qualifications" table="tb_qualifications">
 		<id name="qualificationsId" column="qualificationsId">
 			<generator class="native"></generator>		
 		</id>
 		
 	<!-- 	<property name="sId" column="sId"></property> -->
-		<many-to-one name="seller" class="com.logo.entity.Seller" unique="true" column="sId"></many-to-one>
+		<many-to-one name="seller" class="Seller" unique="true" column="sId"></many-to-one>
 		<property name="examinationResults" column="examinationResults"></property>
 		<property name="unitName" column="unitName"></property>
 		<property name="businessAddress" column="businessAddress"></property>

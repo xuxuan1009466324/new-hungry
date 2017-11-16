@@ -13,6 +13,14 @@ public class Category {
 	private Seller seller;
 	private Category parentCategory;
 
+	public Category getParentCategory() {
+		return parentCategory;
+	}
+
+	public void setParentCategory(Category parentCategory) {
+		this.parentCategory = parentCategory;
+	}
+
 	public Seller getSeller() {
 		return seller;
 	}

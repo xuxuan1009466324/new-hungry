@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
-<hibernate-mapping>
+<hibernate-mapping  package="com.logo.entity">
 
-	<class name="com.logo.entity.Food" table="tb_food">
+	<class name="Food" table="tb_food">
 		<!-- 配置主键 -->
 		<id name="foodId" column="foodId">
 			<generator class="native"></generator>
@@ -15,7 +15,7 @@
 		<property name="status" column="status"></property>
 		<property name="monthlySales" column="monthlySales"></property>
 		
-		<many-to-one name="category" class="com.logo.entity.Category" column="categoryId"></many-to-one>
+		<many-to-one name="category" class="Category" column="categoryId"></many-to-one>
 	</class>
 	
 </hibernate-mapping>

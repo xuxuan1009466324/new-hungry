@@ -17,12 +17,12 @@ public class OrderStatusAction extends ActionSupport{
 	@Resource
 	private OrderStatusService orderStatusService;
 	
-	public String toIndex(){
+	/*public String toIndex(){
 		List<OrderStatus> orderStatuslist = orderStatusService.selectAll();
 		Map<String,Object> request = (Map<String, Object>) ActionContext.getContext().get("request");
 		request.put("orderStatuslist", orderStatuslist);
 		
 		return ActionSupport.SUCCESS;
-	}
+	}*/
 
 }

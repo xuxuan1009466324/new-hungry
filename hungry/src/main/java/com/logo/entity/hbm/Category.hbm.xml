@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
-<hibernate-mapping>
+<hibernate-mapping package="com.logo.entity">
 
-	<class name="com.logo.entity.Category" table="tb_category">
+	<class name="Category" table="tb_category">
 		<!-- 配置主键 -->
 		<id name="categoryId" column="categoryId">
 			<generator class="native"></generator>
@@ -15,8 +15,8 @@
 		<property name="remarks" column="remarks"></property>
 		<property name="status" column="status"></property>
 		
-		<many-to-one name="seller" class="com.logo.entity.Seller" column="sId"></many-to-one>
-		<many-to-one name="parentCategory" class="com.logo.entity.Category" column="parentId"></many-to-one>
+		<many-to-one name="seller" class="Seller" column="sId"></many-to-one>
+		<many-to-one name="parentCategory" class="Category" column="parentId"></many-to-one>
 	</class>
 	
 </hibernate-mapping>

@@ -32,53 +32,12 @@ public class Order {
 	private OrderStatus orderStatus;
 	private PaymentMethod paymentMethod;
 	private CancellationOrder cancellationOrder;
-
-	
-	
-	public Integer getHavePicture() {
-		return havePicture;
-	}
-	public void setHavePicture(Integer havePicture) {
-		this.havePicture = havePicture;
-	}
-	
-	public CancellationOrder getCancellationOrder() {
-		return cancellationOrder;
-	}
-	public void setCancellationOrder(CancellationOrder cancellationOrder) {
-		this.cancellationOrder = cancellationOrder;
-	}
-	public PaymentMethod getPaymentMethod() {
-		return paymentMethod;
-	}
-	public void setPaymentMethod(PaymentMethod paymentMethod) {
-		this.paymentMethod = paymentMethod;
-	}
-	public OrderStatus getOrderStatus() {
-		return orderStatus;
-	}
-	public void setOrderStatus(OrderStatus orderStatus) {
-		this.orderStatus = orderStatus;
-	}
-	public Seller getSeller() {
-		return seller;
-	}
-	public void setSeller(Seller seller) {
-		this.seller = seller;
-	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
 	public Long getOrderId() {
 		return orderId;
 	}
 	public void setOrderId(Long orderId) {
 		this.orderId = orderId;
 	}
-	
 	public String getOrderNo() {
 		return orderNo;
 	}
@@ -97,7 +56,6 @@ public class Order {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	
 	public String getRemarks() {
 		return remarks;
 	}
@@ -116,7 +74,6 @@ public class Order {
 	public void setActualPayment(Double actualPayment) {
 		this.actualPayment = actualPayment;
 	}
-	
 	public Date getOrderTime() {
 		return orderTime;
 	}
@@ -147,14 +104,12 @@ public class Order {
 	public void setDetailedAddress(String detailedAddress) {
 		this.detailedAddress = detailedAddress;
 	}
-
 	public Date getServiceTime() {
 		return serviceTime;
 	}
 	public void setServiceTime(Date serviceTime) {
 		this.serviceTime = serviceTime;
 	}
-	
 	public String getCancellationOrderReason() {
 		return cancellationOrderReason;
 	}
@@ -173,7 +128,41 @@ public class Order {
 	public void setRoomSpeed(Integer roomSpeed) {
 		this.roomSpeed = roomSpeed;
 	}
-	
-	
+	public Integer getHavePicture() {
+		return havePicture;
+	}
+	public void setHavePicture(Integer havePicture) {
+		this.havePicture = havePicture;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public Seller getSeller() {
+		return seller;
+	}
+	public void setSeller(Seller seller) {
+		this.seller = seller;
+	}
+	public OrderStatus getOrderStatus() {
+		return orderStatus;
+	}
+	public void setOrderStatus(OrderStatus orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+	public PaymentMethod getPaymentMethod() {
+		return paymentMethod;
+	}
+	public void setPaymentMethod(PaymentMethod paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+	public CancellationOrder getCancellationOrder() {
+		return cancellationOrder;
+	}
+	public void setCancellationOrder(CancellationOrder cancellationOrder) {
+		this.cancellationOrder = cancellationOrder;
+	}
 	
 }

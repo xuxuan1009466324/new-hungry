@@ -34,7 +34,7 @@
      <!-- 配置hibernate核心配置文件 -->
      <property name="configLocations" value="classpath:hibernate.cfg.xml"></property>
      <!-- 配置映射文件 -->
-     <property name="mappingLocations" value="classpath:com/logo/entity/hbm/OrderStatus.hbm.xml"></property>
+     <property name="mappingLocations" value="classpath:com/logo/entity/hbm/*.hbm.xml"></property>
   </bean>
   
   <!-- 配置事务管理器

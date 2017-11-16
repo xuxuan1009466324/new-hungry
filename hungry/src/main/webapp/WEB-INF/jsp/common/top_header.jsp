@@ -1,17 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
 <div class="container" ng-show="shop" itemscope=""
 	itemtype="http://schema.org/Restaurant">
 	<div class="shopguide-info">
 		<meta itemprop="url" content="https://www.ele.me/shop/157017017">
 		<img
 			ng-src="//fuss10.elemecdn.com/8/cc/2e8fccfc39a1334dd656ac73ed821jpeg.jpeg?imageMogr2/thumbnail/95x95"
-			alt="杭州小笼包" itemprop="image"
+			alt='<s:property value="#request.seller.sellerName"/>' itemprop="image"
 			src="statics/images/2e8fccfc39a1334dd656ac73ed821jpeg.jpeg">
 		<div class="shopguide-info-wrapper">
 			<div>
-				<h1 title="杭州小笼包" ng-class="{hastip: shop.tip}" itemprop="name"
-					class="ng-binding">杭州小笼包</h1>
+				<h1 title='<s:property value="#request.seller.sellerName"/>' ng-class="{hastip: shop.tip}" itemprop="name"
+					class="ng-binding"><s:property value="#request.seller.sellerName"/></h1>
 				<!-- ngIf: shop.tip -->
 				<a ng-href="/shop/157017017/info"
 					href="https://www.ele.me/shop/157017017/info"> <!-- ngIf: isJingHua -->
