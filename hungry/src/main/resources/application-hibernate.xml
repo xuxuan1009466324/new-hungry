@@ -28,7 +28,7 @@
      <property name="maxPoolSize" value="${jdbc.maxPoolSize}"></property>
      <property name="initialPoolSize" value="${jdbc.initialPoolSize}"></property>
      <property name="maxStatements" value="${jdbc.maxStatements}"></property>
-  </bean>
+  </bean>   
   
   <!-- 配置SessionFactory
     使用spring.orm 中的LocalSessionFactoryBean来管理SessionFactory
